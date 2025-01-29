@@ -311,7 +311,7 @@ def heatmap(
                 ax.text(
                     mean_data.shape[1] + text_offset,
                     index,
-                    f"n={count}",
+                    f"n={(count/sum(category_counts))*100:.1f}"+'%',
                     va='center',
                     ha='left',
                 )
